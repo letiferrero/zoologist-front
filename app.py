@@ -18,7 +18,7 @@ body_mass_g = st.number_input("Body mass (g)", value=3950.0)
 sex = st.selectbox("Sex", ["Male", "Female"])
 
 # Set the URL of the local prediction API
-api_url = "http://127.0.0.1:8000/predict"
+api_url = f"{st.secrets['API_URL']}/predict"
 
 # Match each input to the query parameter expected by the API
 params = {
